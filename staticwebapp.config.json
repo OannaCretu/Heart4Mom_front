@@ -1,0 +1,33 @@
+{
+  "routes": [
+    {
+      "route": "/assets/*"
+    },
+    {
+      "route": "/svg/*"
+    },
+    {
+      "route": "/*.{js,ico,html,css,json,webmanifest,txt}"
+    },
+    {
+      "route": "*",
+      "rewrite": "/index.html"
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  },
+  "mimeTypes": {
+    ".json": "text/json",
+    ".js": "text/javascript",
+    ".css": "text/css",
+    ".ico": "image/x-icon",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".gif": "image/gif",
+    ".svg": "image/svg+xml"
+  }
+}
